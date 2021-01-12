@@ -1,0 +1,66 @@
+.todos-list {
+    margin: 30px;
+}
+.ui.card.todo-card {
+    max-height: 400px;
+    padding: 20px;
+    // margin: 10px;
+    min-height: 233px;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+        padding-inline-start: 10px;
+        font-size: 1.3rem;
+    }
+    .center.aligned.content.card-btns-container {
+        margin-top: 30px;
+    }
+    .ui.list.list-markabeles {
+        .markable {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3px 0;
+            &.done {
+                text-decoration: line-through;
+            }
+        }
+    }
+}
+
+.color-palate {
+    display: flex;
+    flex-wrap: wrap;
+    width: 105px;
+    .color {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin: 3px;
+    }
+}
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+}
+.my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+    /* change div to reference your elements you put in <Masonry> */
+    background: grey;
+    margin-bottom: 30px;
+}

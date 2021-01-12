@@ -1,0 +1,33 @@
+.todos-header {
+    .search-container{
+        margin-bottom: 20px;
+    }
+    form {
+        width: 400px;
+        align-items: flex-start;
+        input,.todo-txt-input{
+            width: 200px;
+        }
+    }
+}
+@media (max-width: $narrow-breakpoint) {
+    .todos-header {
+        form {
+            input,.todo-txt-input{
+                width: 150px;
+            }
+        }
+    }
+}
+@media (max-width: $mobile-breakpoint) {
+    .todos-header {
+        form {
+            margin-inline-start:20px ;
+            align-self: flex-start;
+            width: 150px;
+            input,.todo-txt-input{
+                width: 80%;
+            }
+        }
+    }
+}
