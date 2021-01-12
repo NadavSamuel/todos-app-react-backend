@@ -23,7 +23,6 @@ const TodosApp= observer(() => {
   async function onAppLoad() {
     try {
       if (!loggedInUser) userStore.getLoggedInUser()
-      if (!loggedInUser) throw Error
       await todosStore.loadTodos()
     }
     catch(err) {

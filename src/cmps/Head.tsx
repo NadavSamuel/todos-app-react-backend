@@ -35,6 +35,7 @@ export const Head: React.FC = observer(() => {
                 }
                 catch (error) {
                         systemStore.onError()
+                        console.log(error)
                 }
         }
         function toggleIsSendTodo() {

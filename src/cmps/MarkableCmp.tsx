@@ -6,14 +6,14 @@ interface MarkableProps {
     markable: Markable,
     onToggleMarkable(markable: Markable): void,
     onToggleMarkable(markable: Markable): void,
-    onDeleteMarkable(markableTxt: string): void
+    onDeleteMarkable(markableId: string): void
 }
 export const MarkableCmp: React.FC<MarkableProps> = ({ onToggleMarkable, markable, onDeleteMarkable }) => {
-    const { txt, isDone } = markable
+    const { txt, isDone,id } = markable
     const mark = isDone ? 'blue' : null;
     function dispatchDeleteMarkable(event) {
         event.stopPropagation()
-        onDeleteMarkable(txt);
+        onDeleteMarkable(id);
     }
     return (
         <List.Item as="li"  className={`markable `} key={txt} onClick={() => onToggleMarkable(markable)} >

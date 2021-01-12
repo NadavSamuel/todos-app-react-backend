@@ -18,7 +18,8 @@ export interface UserTodos{
 }
 export interface Markable{
     isDone:boolean,
-    txt:string
+    txt:string,
+    id:string
 }
 export interface User{
     username:string,

@@ -74,7 +74,7 @@ export const TodoCard: React.FC<todoProps> = observer(({ todo }) => {
     function onToggleMarkable(markableToToggle:Markable):void {
         markableToToggle.isDone = !markableToToggle.isDone;
         todo.markables = todo.markables.map((markable) =>{
-            if(markable.txt === markableToToggle.txt ) markable = markableToToggle
+            if(markable.id === markableToToggle.id ) markable = markableToToggle
             return markable
         })
         onUpdateTodo(todo);
@@ -83,8 +83,8 @@ export const TodoCard: React.FC<todoProps> = observer(({ todo }) => {
         todo.markables.push(markableToAdd);
         onUpdateTodo(todo);
     }
-    function onDeleteMarkable(markableTxt: string): void {
-        todo.markables = todo.markables.filter(markable => markable.txt !== markableTxt);
+    function onDeleteMarkable(markableId: string): void {
+        todo.markables = todo.markables.filter(markable => markable.id !== markableId);
         onUpdateTodo(todo);
     }
     async function onUpdateTodo(todoToUpdate: Todo = todo) {

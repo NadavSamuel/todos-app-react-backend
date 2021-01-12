@@ -34,8 +34,8 @@ export const NewTodoCard: React.FC<NewTodoCardProps> = ({ type, onTodoSubmit, is
     function onTxtChange(txt: string): void {
         setTxt(txt);
     }
-    function onDeleteMarkable(markableToDelete: string): void {
-        setMarkables(markables.filter(markable => markable.txt !== markableToDelete));
+    function onDeleteMarkable(markableToDeleteId: string): void {
+        setMarkables(markables.filter(markable => markable.id !== markableToDeleteId));
 
     }
     function onAddMarkable(markableToAdd: Markable): void {
